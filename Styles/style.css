@@ -1,0 +1,25 @@
+h1{
+    text-align: center;
+    color: white;
+}
+
+body{
+    background-image: url('https://static1.moviewebimages.com/wordpress/wp-content/uploads/2023/12/1400-x-700-14.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5');
+    background-size:100%;
+}
+
+#muchcard{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 5rem 2.5rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    backdrop-filter: blur(1rem);
+    background-color: rgba(255,255,255,0.5);
+    border-top-color: rgba(255,255,255,0.5);
+    border-left-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    border-right-color: rgba(255,255,255,0.5);
+}
+
