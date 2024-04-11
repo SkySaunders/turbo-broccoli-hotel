@@ -8,6 +8,38 @@ let cityNames = [
     ["SC", ["Charleston", "Columbia"]],
   ];
 
+  function storeInput(){
+    const inputArray = [];
+
+    const input1 = document.getElementById("noSpaces");
+    const input2 = document.getElementById("inputAddress");
+    const input3 = document.getElementById("inputZip");
+
+    const value1 = input1.value;
+    const value2 = input2.value;
+    const value3 = input3.value;
+
+    inputArray.push(value1, value2, value3);
+
+    console.log(inputArray);
+}
+
+function jget() {
+
+    console.log("in jget");
+    fetch("data/india.json")
+    .then((result) => {
+            console.log(result);
+            return result.json();
+        })
+        .then((response) => {
+            console.log(response);
+            console.log(response.name); 
+        })
+    .catch((error) => { console.log(error); });
+}
+
+  
 $( document ).ready(function() {
     // makes it such that only numbers may be entered
      $("#inputZip").keyup(function (e) {
@@ -58,12 +90,23 @@ $( document ).ready(function() {
         });
       });
 
+
+$('#btnLoadData').click(function() {
+    jget()
+    storeInput()
+
+
+})
+
+
+
     // Verify entry into the email box
     $("#submitButton").click(function () {
         if ($("#noSpaces").val()) {
         console.log("there is something in this text box");
         $("#noSpaces").removeClass("error");
         } 
+
         else {
         console.log("there is NOTHING in this text box");
         $("#noSpaces").removeClass("success").addClass("error").focus();
